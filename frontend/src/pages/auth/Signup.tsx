@@ -47,7 +47,7 @@ const Signup : React.FC = () => {
        dispatch(SignupUser({email,password}))
     }
   return (
-      <Layout>
+     
            <div className="min-h-[80vh] flex items-center justify-center pt-2">
       <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-sm">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Join Us Today</h2>
@@ -97,7 +97,7 @@ const Signup : React.FC = () => {
         </p>
       </div>
     </div>
-      </Layout>
+      
   )
 }
 

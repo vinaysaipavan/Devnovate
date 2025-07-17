@@ -1,19 +1,19 @@
 import React, { useState, type ReactNode } from "react";
 import { Menu, X } from "lucide-react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { Link, useLocation } from "react-router"; // ✅ make sure you're using `react-router-dom` if using v6
+import { Link,useLocation} from "react-router-dom";  // ✅ make sure you're using `react-router-dom` if using v6
 import Sidebar from "./SideBar";
+import { Outlet } from "react-router-dom";
+import NavLinks from "./NavLinks";
 
-interface LayoutProps {
-  children: ReactNode;
-}
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+
+const Layout: React.FC = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const location = useLocation();
 
   // ✅ Check if current route is user profile
-  const isUserProfile = location.pathname === "/profile"; // <-- adjust if needed
+  const isUserProfile = location.pathname === "/profile" || location.pathname == "/upload" || location.pathname == "/my-videos" || location.pathname == "/update-video" || location.pathname == "/dashboard"; // <-- adjust if needed
 
   return (
     <div className="min-h-screen bg-bgTwo flex flex-col relative">
@@ -26,11 +26,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         )}
 
         {/* Navigation links (only visible on md and lg) */}
-        <div className="hidden md:flex gap-4 capitalize text-sm ms-auto">
+        {/* <div className="hidden md:flex gap-4 capitalize text-sm ms-auto">
           <Link to="/">Home</Link>
-          <Link to="/all">All Videos</Link>
+          <Link to="/all-videos">All Videos</Link>
           <Link to="/sign-in">SignIn</Link>
-        </div>
+          <Link to="/sign-up">SignUp</Link>
+        </div> */}
+
+        <NavLinks />
 
         {/* Brand title only on small screens */}
         <div className="block md:hidden text-lg font-semibold ms-auto">
@@ -65,7 +68,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </>
         )}
 
-        <div className="flex-grow">{children}</div>
+        <div className="flex-grow  min-h-screen p-2"><Outlet /></div>
       </div>
 
       {/* Footer */}

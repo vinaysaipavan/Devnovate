@@ -4,9 +4,9 @@ import MainProfile from '../../components/MainProfile';
 
 const UserProfile: React.FC = () => {
   return (
-    <Layout>
+   
       <MainProfile />
-    </Layout>
+  
   );
 };
 

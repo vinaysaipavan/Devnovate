@@ -62,7 +62,7 @@ const ResetPasswordEmail : React.FC = () => {
 
             <button
               type="submit"
-              className={`w-full mt-4 px-4 bg-green-500 text-white font-bold rounded-md shadow-md transition duration-300 disabled:bg-green-300 disabled:cursor-not-allowed flex items-center justify-center ${
+              className={`w-full mt-4 p-4 bg-green-500 text-white font-bold rounded-md shadow-md transition duration-300 disabled:bg-green-300 disabled:cursor-not-allowed flex items-center justify-center ${
                 loading ? "bg-opacity-90" : "hover:bg-opacity-90"
               }`}
               disabled={loading}

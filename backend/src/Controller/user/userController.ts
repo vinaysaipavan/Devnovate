@@ -1,11 +1,13 @@
 import User from "../../Models/userSchema";
 import { AuthenticatedRequestHandler, authenticatedRequest } from "../../config/passportJWTStratergy";
 import { sendResponse } from "../../utils/sendResponse";
+import { Types } from "mongoose";
 
 export const getUserDetails : AuthenticatedRequestHandler = async (req,res)=>{
     try{
-      if(req.user instanceof User){
-        const userId = req.user._id;
+      
+      const userId = (req.user as { _id: Types.ObjectId })._id;
+
         if(!userId){
             return sendResponse(res,400,false,"Please signin to continue")
         }
@@ -16,7 +18,7 @@ export const getUserDetails : AuthenticatedRequestHandler = async (req,res)=>{
         }
 
          sendResponse(res,200,true,"User details fetched successfully",{user})
-      }
+      
     }
     catch(error){
         console.error(`Error in sending user details : ${error}`)
@@ -35,8 +37,9 @@ export const updateUser : AuthenticatedRequestHandler = async (req,res) => {
         return sendResponse(res,400,false,"Please provide Email")
       }
 
-      if(req.user instanceof User){
-        const userId = req.user._id
+      
+      const userId = (req.user as { _id: Types.ObjectId })._id;
+
         if(!userId){
             return sendResponse(res,400,false,"User Id not found Please signin to continue")
         }
@@ -45,7 +48,7 @@ export const updateUser : AuthenticatedRequestHandler = async (req,res) => {
             return sendResponse(res,400,false,"User not found Please Signup")
         }
          sendResponse(res,200,true,"SuccessFully Updated Your Details",{name,email});
-      }
+      
     }
     catch(error){
         console.error(`Error in updating user details : ${error}`)

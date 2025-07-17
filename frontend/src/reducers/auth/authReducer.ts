@@ -18,6 +18,13 @@ interface SignupPayLoad{
     email : string;
     password : string;
 }
+interface VideoCreatePayLoad{
+    title?: string;
+    description?: string;
+    path: string;
+    isPrivate : boolean;
+    thumbNail?: string;
+}
 interface SigninPayLoad{
     email : string;
     password : string;
@@ -52,6 +59,41 @@ export const SignupUser = createAsyncThunk<
       email,
       password,
     });
+
+    if (data.success) {
+      toast.success(data.message);
+      return data; // ✅ Must return
+    } else {
+      toast.warning(data.message);
+      return rejectWithValue(data.message);
+    }
+  } catch (error: any) {
+    toast.error(error?.response?.data?.message || "Signup failed");
+    return rejectWithValue(error?.response?.data?.message || "Signup failed");
+  }
+});
+
+export const VideoCreate = createAsyncThunk<
+  AuthResponse, // 👈 return type
+  VideoCreatePayLoad, // 👈 argument type
+  { rejectValue: string }
+>("auth/sign-up-user", async (payload, { rejectWithValue }) => {
+  try {
+    const { title, description,path,isPrivate,thumbNail } = payload;
+    const token = localStorage.getItem("token");
+    console.log("TOKEN:", token);
+    if (!token) {
+      return rejectWithValue("No token found");
+    }
+const config = {
+  headers: {
+    Authorization: `Bearer ${token}`,
+  },
+};
+console.log("CONFIG:", config);
+    const { data } = await backendAPI.post<AuthResponse>("/api/v1/form/upload", {
+      title, description,path,isPrivate,thumbNail
+    },config);
 
     if (data.success) {
       toast.success(data.message);

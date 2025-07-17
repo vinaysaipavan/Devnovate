@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import type {AppDispatch}  from '../../reducers/store';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectLoading, signInUser } from '../../reducers/auth/authReducer';
+import { fetchUserDetails, selectLoading, signInUser } from '../../reducers/auth/authReducer';
 
 const Signin : React.FC = () => {
     const [email,setEmail] = React.useState('');
@@ -37,7 +37,8 @@ const Signin : React.FC = () => {
     }
     
     return (
-        <Layout>
+    
+    
              <div className="min-h-screen flex items-center justify-center pt-2">
         <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-sm">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Join Us Today</h2>
@@ -72,7 +73,7 @@ const Signin : React.FC = () => {
             </div>
 
             <div className='text-sm font-medium text-blue-700'> 
-                <Link to={"/forgot"}>Forgot your password ?</Link>
+                <Link to={"/reset-password"}>Forgot your password ?</Link>
             </div>
   
             <button
@@ -99,7 +100,7 @@ const Signin : React.FC = () => {
           </p>
         </div>
       </div>
-        </Layout>
+    
     )
 }
 
