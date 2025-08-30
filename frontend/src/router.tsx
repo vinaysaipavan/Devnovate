@@ -19,6 +19,7 @@ import EditBlog from "./pages/blog/EditBlog";
 import CategoryBlogs from "./pages/blog/CategoryBlogs";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import BlogInterests from "./pages/BlogInterests";
 
 // Define routes with type safety
 const routes: RouteObject[] = [

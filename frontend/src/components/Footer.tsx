@@ -1,5 +1,8 @@
 // components/Footer.jsx
 import { Link } from "react-router-dom";
+import { FaLinkedin } from "react-icons/fa6";
+import { FaInstagramSquare } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -32,16 +35,13 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-5">Connect With Us</h4>
             <div className="flex space-x-4">
               <a href="#" className="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300" aria-label="Twitter">
-                <i className="fab fa-twitter"></i>
+                <FaLinkedin className="text-blue-500" />
               </a>
               <a href="#" className="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300" aria-label="LinkedIn">
-                <i className="fab fa-linkedin-in"></i>
+                <FaInstagramSquare className="text-pink-300" />
               </a>
               <a href="#" className="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300" aria-label="GitHub">
-                <i className="fab fa-github"></i>
-              </a>
-              <a href="#" className="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300" aria-label="Discord">
-                <i className="fab fa-discord"></i>
+                <BsTwitterX />
               </a>
             </div>
           </div>

@@ -3,17 +3,21 @@ import React from "react";
 const About: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto p-8">
-      <h1 className="text-4xl font-bold text-blue-600 mb-6">About Us</h1>
+      <h1 className="text-4xl font-bold text-blue-600 mb-6">About Devnovate</h1>
       <p className="text-gray-700 text-lg leading-relaxed mb-4">
-        Welcome to <span className="font-semibold">MyVideoHub</span>! 🎬  
-        This platform is built to share blogs, videos, and ideas for the
-        hackathon community. Our mission is to connect creators, developers,
-        and innovators through engaging content.
+        <span className="font-semibold">Devnovate</span> is a dynamic platform 
+        built to inspire, connect, and empower developers. 💡  
+        Our goal is to bring together innovators, learners, and creators in a 
+        collaborative environment where ideas turn into impactful solutions.
+      </p>
+      <p className="text-gray-700 text-lg leading-relaxed mb-4">
+        Whether you’re a beginner exploring new technologies, a professional 
+        looking to share your expertise, or a team collaborating on projects, 
+        Devnovate provides the tools and space to grow. 🌐  
       </p>
       <p className="text-gray-700 text-lg leading-relaxed">
-        Whether you’re here to learn, share, or collaborate, this hub is for
-        you. We are a team of passionate developers building a space where
-        creativity meets technology. 🚀
+        We are passionate about building a hub that drives creativity, fosters 
+        learning, and encourages innovation within the developer community. 🚀
       </p>
     </div>
   );
