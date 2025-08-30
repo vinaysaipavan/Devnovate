@@ -23,7 +23,7 @@ export default function CreateBlog() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
   e.preventDefault();
   try {
-    const response = await fetch("http://localhost:5001/api/blogs", {
+    const response = await fetch("https://devnovate-backend.onrender.com/api/blogs", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),

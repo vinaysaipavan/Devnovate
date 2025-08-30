@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const backendAPI = axios.create({
-    baseURL: "http://localhost:5000"
+    baseURL: "https://devnovate-backend.onrender.com/"
 })
 
 export default backendAPI
