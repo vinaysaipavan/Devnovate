@@ -34,10 +34,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-5">Connect With Us</h4>
             <div className="flex space-x-4">
-              <a href="#" className="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300" aria-label="Twitter">
+              <a href="https://www.linkedin.com/company/devnovate/" className="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300" aria-label="Twitter">
                 <FaLinkedin className="text-blue-500" />
               </a>
-              <a href="#" className="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300" aria-label="LinkedIn">
+              <a href="https://www.instagram.com/devnovate.co/" className="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300" aria-label="LinkedIn">
                 <FaInstagramSquare className="text-pink-300" />
               </a>
               <a href="#" className="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300" aria-label="GitHub">
