@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router'
-import Layout from '../../components/Layout'
 import backendAPI from '../../api/BackendApi'
 import { toast } from 'sonner'
 
@@ -36,7 +35,6 @@ const ResetPasswordEmail : React.FC = () => {
          }
     }
   return (
-    <Layout>
   <div className="min-h-screen flex flex-col">
     <main className="flex-1 p-4 flex items-center justify-center">
       <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-6 mb-10">
@@ -82,7 +80,6 @@ const ResetPasswordEmail : React.FC = () => {
 
     {/* Footer is assumed to be in the Layout */}
   </div>
-</Layout>
 
   )
 }

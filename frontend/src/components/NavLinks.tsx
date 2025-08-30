@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectLoggedInUser} from '../reducers/auth/authReducer'; // assuming logoutUser action exists
 
 import type { AppDispatch } from '../reducers/store';
-import { fetchUserDetails, logOutUser } from '../reducers/auth/authReducer';
+import { logOutUser } from '../reducers/auth/authReducer';
 import { useNavigate } from 'react-router-dom';
 
 const NavLinks = () => {

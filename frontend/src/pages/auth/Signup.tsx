@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../../components/Layout'
 import { Link } from 'react-router-dom';
 import {useDispatch} from "react-redux"
 import { SignupUser } from '../../reducers/auth/authReducer';

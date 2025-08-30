@@ -17,7 +17,7 @@ interface HeroVideoCardProps {
 const MyVideoCard: React.FC<HeroVideoCardProps> = ({ video}) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [, setIsLoading] = useState(false);
   const [duration, setDuration] = useState<number>(0);
   const dispatch = useDispatch<AppDispatch>();
   const {configWithJWT} = useConfig();

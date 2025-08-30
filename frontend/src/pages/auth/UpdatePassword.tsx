@@ -3,7 +3,6 @@ import { useNavigate, useParams } from 'react-router'
 import backendAPI from '../../api/BackendApi'
 import { toast } from 'sonner'
 import { Link } from 'react-router'
-import Layout from '../../components/Layout'
 
 interface UpdatePasswordResponse{
     success : boolean,
@@ -37,7 +36,6 @@ const UpdatePassword : React.FC = () => {
          }
     }
   return (
-    <Layout>
     <div className="min-h-screen flex flex-col">
       <main className="flex-1 p-4 flex items-center justify-center">
         <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-6 mb-10">
@@ -88,7 +86,6 @@ const UpdatePassword : React.FC = () => {
   
       {/* Footer is assumed to be in the Layout */}
     </div>
-  </Layout>
   )
 }
 

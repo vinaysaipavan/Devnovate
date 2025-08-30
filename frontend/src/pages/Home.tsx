@@ -72,11 +72,11 @@ const mockTrendingBlogs = [...mockBlogs]
   .slice(0, 3);
 
 const Home: React.FC = () => {
-  const [blogs, setBlogs] = useState<Blog[]>(mockBlogs);
-  const [trendingBlogs, setTrendingBlogs] = useState<Blog[]>(mockTrendingBlogs);
+  const [blogs] = useState<Blog[]>(mockBlogs);
+  const [trendingBlogs] = useState<Blog[]>(mockTrendingBlogs);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-  const [isAdmin, setIsAdmin] = useState<boolean>(false);
+  const [, setIsAdmin] = useState<boolean>(false);
 
   useEffect(() => {
     const token = localStorage.getItem("token");

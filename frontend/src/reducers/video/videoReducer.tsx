@@ -41,11 +41,6 @@ interface FileFetchPayLoad{
     configWithJWT : ConfigWithJWT;
 }
 
-interface SingleFileResponse{
-    success : boolean;
-    message : string;
-    video ?: IVideo
-}
 interface FileResponse{
     success : boolean;
     message : string;

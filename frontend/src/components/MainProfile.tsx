@@ -25,17 +25,15 @@ const MainProfile: React.FC = () => {
 
   const handleSaveClick = async () => {
     try {
-      const { data } = await backendAPI.post<AuthResponse>(
+      const { data } = await backendAPI.post<Response>(
         "/api/v1/auth/user/update",
         { name, email },
         configWithJWT
       );
-      if (data.success) {
-        toast.success(data.message);
+      if (data) {
+        console.log("Success")
         dispatch(updatedUser({ name, email }));
-      } else {
-        toast.warning(data.message);
-      }
+      } 
     } catch (error) {
       toast.error("Something went wrong");
       console.error(error);

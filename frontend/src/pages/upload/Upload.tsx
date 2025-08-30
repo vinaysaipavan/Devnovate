@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import UploadComponent from '../../components/UploadComponent';
-import Layout from '../../components/Layout';
 import { toast } from 'sonner';
 import { useDispatch } from 'react-redux';
 import { VideoCreate } from '../../reducers/auth/authReducer';

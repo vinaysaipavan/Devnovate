@@ -1,10 +1,9 @@
 import React from 'react'
-import Layout from '../../components/Layout'
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import type {AppDispatch}  from '../../reducers/store';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchUserDetails, selectLoading, signInUser } from '../../reducers/auth/authReducer';
+import { selectLoading, signInUser } from '../../reducers/auth/authReducer';
 
 const Signin : React.FC = () => {
     const [email,setEmail] = React.useState('');

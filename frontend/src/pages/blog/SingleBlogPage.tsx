@@ -1,6 +1,6 @@
 // src/pages/blog/SingleBlogPage.tsx
 
-import React, { type JSX } from "react";
+import  { type JSX } from "react";
 
 export default function SingleBlogPage(): JSX.Element {
   return (

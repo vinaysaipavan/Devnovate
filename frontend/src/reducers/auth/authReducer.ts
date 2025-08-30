@@ -33,7 +33,7 @@ interface SigninPayLoad{
 interface AuthResponse{
     success: boolean;
     message: string;
-    user?: User;
+    user: User;
 }
 
 export interface AuthState{
@@ -195,7 +195,7 @@ const authSlice = createSlice({
         builder.addCase(signInUser.pending,(state) => {
             (state.loading = true)
         })
-        .addCase(signInUser.fulfilled,(state,action)=>{
+        .addCase(signInUser.fulfilled,(state)=>{
             state.loading = false;
         })
         .addCase(signInUser.rejected,(state)=>{

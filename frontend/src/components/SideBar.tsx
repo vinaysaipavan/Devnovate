@@ -1,5 +1,5 @@
 // Sidebar.tsx
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Home, Video, Upload, User, LogOut } from 'lucide-react';
 import type { AppDispatch } from '../reducers/store';
