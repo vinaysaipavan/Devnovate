@@ -18,14 +18,14 @@ interface Blog {
 const mockBlogs: Blog[] = [
   {
     id: 1,
-    title: "Getting Started with React",
-    excerpt: "Learn the basics of React and how to create your first component.",
+    title: "Data Science",
+    excerpt: "Data Science is the interdisciplinary field that uses scientific methods, algorithms, and systems to extract insights and knowledge from structured and unstructured data. It combines statistics, programming, and domain expertise to analyze data, make predictions, and support data-driven decision-making across industries.",
     author: "Jane Smith",
     date: "2025-01-15",
     likes: 42,
     comments: 12,
     category: "Development",
-    image: "/images/react.png",
+    image: "/src/assets/data.jpeg",
     status: "published",
   },
   {
@@ -37,7 +37,7 @@ const mockBlogs: Blog[] = [
     likes: 35,
     comments: 8,
     category: "Database",
-    image: "/images/mongodb.png",
+    image: "/src/assets/Mongodb.png",
     status: "published",
   },
   {
@@ -49,7 +49,7 @@ const mockBlogs: Blog[] = [
     likes: 78,
     comments: 15,
     category: "AI & ML",
-    image: "/images/ai-ml.png",
+    image: "/src/assets/Aiml.jpg",
     status: "published",
   },
 ];
