@@ -1,16 +1,27 @@
-import type { ReactElement, ReactNode } from "react";
+// components/ProtectedRoute.tsx
+import React, { ReactElement } from "react";
 import { Navigate } from "react-router-dom";
 
-
-interface RouteProps{
-    element : ReactElement
+interface ProtectedRouteProps {
+  element: ReactElement;
 }
 
-export const ProtectedRouteHome : React.FC<RouteProps>= ({element})=>{
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ element }) => {
   const token = localStorage.getItem("token");
-  return token ? element : <Navigate to={"/sign-in"} replace/>
-}
-export const ProtectedRoute : React.FC<RouteProps>= ({element})=>{
+  return token ? element : <Navigate to="/sign-in" replace />;
+};
+
+export const AdminProtectedRoute: React.FC<ProtectedRouteProps> = ({ element }) => {
   const token = localStorage.getItem("token");
-  return token ? <Navigate to={"/profile"} replace/> : element
-}
+  const role = localStorage.getItem("role");
+
+  if (!token) {
+    return <Navigate to="/sign-in" replace />;
+  }
+
+  if (role !== "admin") {
+    return <Navigate to="/" replace />;
+  }
+
+  return element;
+};

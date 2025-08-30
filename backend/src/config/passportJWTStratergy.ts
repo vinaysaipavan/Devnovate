@@ -29,7 +29,7 @@ const opts : StrategyOptions = {
 
 passport.use(new JWTStratergy(opts,async(jwtpayload,done)=> {
     try{
-        const user = await User.findById(jwtpayload._id).select("password")
+        const user = await User.findById(jwtpayload._id).select("-password")
         if(!user){
             return done(null,false)
         }
